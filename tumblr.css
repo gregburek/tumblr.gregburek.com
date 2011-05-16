@@ -1,0 +1,94 @@
+	/* Greg Burek derived all this from Stil CSS framework by Evan Walsh - http://stil.nothingconcept.com */
+	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+	table{border-collapse:collapse;border-spacing:0}
+	address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:400}
+	code{font-family:monospace}
+	em{font-style:italic}
+	strong{font-weight:700}
+	ol,ul{list-style:none}
+	caption,th{text-align:left}
+	h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}
+	q:before,q:after{content:''}
+	fieldset,img,abbr,acronym{border:0}
+	a{outline:0}
+	form input:focus,form textarea:focus,form select:focus{outline:0}
+	body{font:12px 'Helvetica Neue',Helvetica,Arial,'Liberation Sans',FreeSans,sans-serif}
+	body{background:#fff;color:#000;margin:40px;}
+	body {font-family: {font:Body}; background-color: {color:Background};}
+	p{margin:10px 0}
+	p + p{margin-top:0}
+	abbr,acronym{border-bottom:#000 1px dotted}
+	h1,h2,h3,h4,h5,h6{margin:0 0 10px 0;font-weight:bold}
+	h1{font-size:140%} /*blog title*/
+	h2{font-size:100%} /*About link*/
+	h3{font-size:120%} /*Description*/
+	h4{font-size:120%}
+	h5{font-size:115%}
+	h6{font-size:110%}
+	#wrap h1{font-size:140%}
+	#wrap h2{font-size:130%}
+	#wrap h3{font-size:120%} 
+	#wrap h4{font-size:150%} /*Post Titles*/
+	#wrap h5{font-size:110%}
+	#wrap h6{font-size:100%}
+	#wrap pre {white-space: -moz-pre-wrap; white-space: -pre-wrap;white-space: -o-pre-wrap; white-space: pre-wrap; word-wrap: break-word;}
+	a{text-decoration:none}
+	a:link,a:visited,a:active{color:#000;text-decoration:underline;}
+	a:hover{color:#999;}
+	ul,ol{margin:10px 0 10px 30px}
+	ul{list-style:disc}
+	ol{list-style:decimal}
+	fieldset{border:#ccc 1px solid;padding:0px 10px}
+	legend{padding:5px}
+	blockquote {font-size: 1em; margin: 2em 0em 2em 1em; adding: 0 .75em 0 1.25em; border-left: 1px solid #baa; border-right: 0px solid #baa; }
+	blockquote strong {font-weight: bold; font-size: 1em; letter-spacing: normal; text-transform: none; }
+	form{margin:10px 0}
+	form label{font-weight:bold;margin:0 0 3px 0;display:block}
+	form input,form textarea,form select{background:#fff;border:#aaa 1px solid;margin:0 0 10px 0;padding:3px;width:500px;font:12px 'Helvetica Neue',Helvetica,Arial,'Liberation Sans',FreeSans,sans-serif}
+	form input:focus,form textarea:focus,form select:focus{border:#000 1px solid;outline:0}
+	form textarea{height:150px}
+	form select{width:auto}
+	form input[type="radio"],form input[type="checkbox"],form input[type="submit"]{width:auto}
+	code,pre,tt,kbd{font:11px Monaco,'Andale Mono','Liberation Mono','Courier New',monotype;background:#eee}
+	
+	#wrap{width:500px;}
+	#head{margin:0 0 40px 0;width:500px;}
+	#nav{font-size:14px;font-weight:bold;width:500px;}
+	#footer{margin:20px 0;width:500px;}
+	.toggle_container{background:#eee;padding:5px;width:100%;}
+	.permalink{float:left;font-size:14px;margin-left:-20px;font-weight:bold;}
+	.info{color:#aaa;margin-top:10px}
+	.post{margin:0 0 20px 0;border-bottom:#eee 1px solid;padding:0 0 20px 0;width:500px;}
+	.quote blockquote{margin:0 0 0 10px;width:500px;border-left: 0px solid #baa;}
+	.quote cite{display:block;text-align:right;margin:10px 0 0 0;font-weight:bold;width:500px;}
+	.quote .deco{float:left;margin:0 5px 0 0;font-weight:bold;font-size:14px;width:500px;}
+	.link .go{font-weight:bold;font-size:14px;width:500px;}
+	.chat ul{list-style:none;margin:0;width:500px;}
+	.photo img,.audio object,.video object,.video embed{margin:0 0 10px 0;display:block;width:500px;}
+	.prev{float:left;}
+	.next{float:right;}
+	.clr{clear:both;}
+	.info {color: {color:Post Info};}
+	.post {border-color: {color:Separator};}
+	.post text {border-color: {color:Separator};}
+	.text img {max-width: 500px;}
+	.text blockquote img {max-width: 150px; }
+	a.comments_link {color: #aaa;text-decoration: none;}
+	#disqus_thread {padding: 20px 0; clear: both;}
+	#nav_list{position:fixed; left:600px; top:30px; width:150px;}
+	#nav_list h1 a{color:inherit; text-decoration:none;}
+	#nav_list h1 a:hover{text-decoration:underline;}
+	#nav_list h2 a{color:inherit; text-decoration:none;}
+	#nav_list h2 a:hover{text-decoration:underline;}
+	#nav_list p{font-style:italic; font-size:12px; line-height:17px;}
+	#nav_list p a{color:#000000;}
+	#nav_list ul,ol{margin:0px 0px 0px 10px}
+	#nav_list ul{list-style:square}
+	#nav_list ol{list-style:decimal}
+	ol.notes { padding: 0px; margin: 25px 0px; list-style-type: none; border-bottom: solid 1px #ccc; }
+	ol.notes li.note { border-top: solid 1px #ccc; padding: 10px; }
+	ol.notes li.note img.avatar { vertical-align: -4px; margin-right: 10px; width: 16px; height: 16px;}
+	ol.notes li.note span.action {font-weight: bold;}
+	ol.notes li.note .answer_content {font-weight: normal;}
+	ol.notes li.note blockquote {border-color: #eee;padding: 4px 10px; margin: 10px 0px 0px 25px;}
+	ol.notes li.note blockquote a {text-decoration: none;}

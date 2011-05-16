@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head profile="http://gmpg.org/xfn/11">
+    <meta name="color:Background" content="#ffffff"/>
+    <meta name="font:Body" content="'Helvetica Neue',Helvetica,Arial,'Liberation Sans',FreeSans,sans-serif"/>
+    <meta name="color:Separator" content="#eeeeee"/>
+    <meta name="color:Description" content="#eeeeee"/>
+    <meta name="color:Post Info" content="#aaaaaa"/>
+    
+    <meta name="text:Disqus Shortname" content="" />
+
+    <title>{block:SearchPage}Search results for "{SearchQuery}" - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+<link rel="me" type="text/html" href="http://www.google.com/profiles/greg.burek"/>
+	<link rel="stylesheet" type="text/css" href="http://gregburek.github.com/css/tumblr.css" />
+    <script src="http://static.tumblr.com/shrl2lc/Kb0kl4vtp/jquery.js" type="text/javascript" charset="utf-8"></script>
+
+<link rel="shortcut icon" href="{Favicon}" />
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+  <style type="text/css">
+    {CustomCSS}
+  </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="head">
+        {block:HasPages}
+        	<br/><br/>
+            {block:Pages}<a href="{URL}">{Label}</a>&nbsp;&nbsp;{/block:Pages}
+        {/block:HasPages}
+      </div>
+      
+      <div id="content">
+        
+        {block:Posts}
+        
+        {block:Text}
+        <div class="post text">
+          {block:Date}<a href="{Permalink}" class="permalink">#</a>{/block:Date}
+          {block:Title}<h4>{Title}</h4>{/block:Title}
+          {Body}
+          {block:Date}<div class="info">{TimeAgo}{block:IfDisqusShortname} with <a href="{Permalink}#disqus_thread" class="comments_link"></a>.{block:IfDisqusShortname}</div>{/block:Date}
+        </div>
+        {/block:Text}
+        
+        {block:Photo}
+        <div class="post photo">
+          {block:Date}<a href="{Permalink}" class="permalink">#</a>{/block:Date}
+          {LinkOpenTag}<img alt="{PhotoAlt}" src="{PhotoURL-500}"/>{LinkCloseTag}
+          {block:Caption}{Caption}{/block:Caption}
+          {block:Date}<div class="info">This was posted {TimeAgo}. It has {NoteCountWithLabel}{block:IfDisqusShortname} and <a href="{Permalink}#disqus_thread" class="comments_link"></a>{block:IfDisqusShortname}{block:HighRes} and <a href="{PhotoURL-HighRes}">a high-res version</a>{/block:HighRes}.</div>{/block:Date}
+        </div>
+        {/block:Photo}
+        
+        {block:Quote}
+        <div class="post quote">
+          {block:Date}<a href="{Permalink}" class="permalink">#</a>{/block:Date}
+          <div class="deco">&#8220;</div>
+          <blockquote>{Quote}</blockquote>
+          {block:Source}<cite>{Source}</cite>{/block:Source}
+          {block:Date}<div class="info">This was posted {TimeAgo}.  It has {NoteCountWithLabel}{block:IfDisqusShortname} and <a href="{Permalink}#disqus_thread" class="comments_link"></a>{block:IfDisqusShortname}.</div>{/block:Date}</div>
+        </div>
+        {/block:Quote}
+        
+        {block:Link}
+        <div class="post link">
+          {block:Date}<a href="{Permalink}" class="permalink">#</a>{/block:Date}
+          <a class="go" href="{URL}">{Name}</a>
+          {block:Description}{Description}{/block:Description}
+          {block:Date}<div class="info">This was posted {TimeAgo}.  It has {NoteCountWithLabel}{block:IfDisqusShortname} and <a href="{Permalink}#disqus_thread" class="comments_link"></a>{block:IfDisqusShortname}.</div>{/block:Date}</div>
+        </div>
+        {/block:Link}
+        
+        {block:Chat}
+        <div class="post chat">
+          {block:Date}<a href="{Permalink}" class="permalink">#</a>{/block:Date}
+          {block:Title}<h4>{Title}</h4>{/block:Title}
+          <ul class="conv">
+            {block:Lines}<li class="{Alt}">{block:Label}<strong>{Label}</strong> {/block:Label}{Line}</li>{/block:Lines}
+          </ul>
+          {block:Date}<div class="info">This was posted {TimeAgo}.  It has {NoteCountWithLabel}{block:IfDisqusShortname} and <a href="{Permalink}#disqus_thread" class="comments_link"></a>{block:IfDisqusShortname}.</div>{/block:Date}
+        </div>
+        {/block:Chat}
+        
+        {block:Audio}
+        <div class="post audio">
+          {block:Date}<a href="{Permalink}" class="permalink">#</a>{/block:Date}
+          {AudioPlayerWhite}
+          {block:Caption}{Caption}{/block:Caption}
+          {block:Date}<div class="info">This was posted {TimeAgo}.  It has {NoteCountWithLabel}{block:IfDisqusShortname}, <a href="{Permalink}#disqus_thread" class="comments_link"></a>,{block:IfDisqusShortname} and {FormattedPlayCount} plays.</div>{/block:Date}
+        </div>
+        {/block:Audio}
+        
+        {block:Video}
+        <div class="post video">
+          {block:Date}<a href="{Permalink}" class="permalink">#</a>{/block:Date}
+          {Video-500}
+          {block:Caption}{Caption}{/block:Caption}
+          {block:Date}<div class="info">This was posted {TimeAgo}.  It has {NoteCountWithLabel}{block:IfDisqusShortname} and <a href="{Permalink}#disqus_thread" class="comments_link"></a>{block:IfDisqusShortname}.</div>{/block:Date}
+        </div>
+        {/block:Video}
+        
+        {block:Date}
+        {block:IfDisqusShortname}
+        {block:Permalink}
+        <div id="disqus_thread"></div>
+        <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+        <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+        {/block:Permalink}
+        {/block:IfDisqusShortname}
+        {block:Date}
+        
+        {block:PostNotes}
+          {PostNotes}
+        {/block:PostNotes}
+        {/block:Posts}
+        
+        {block:Pagination}
+        <div id="nav">
+          {block:PreviousPage}<a href="{PreviousPage}" class="prev">Previous page</a>{/block:PreviousPage}
+          {block:NextPage}<a href="{NextPage}" class="next">Next page</a>{/block:NextPage}
+          <div class="clr"></div>
+        </div>
+         {/block:Pagination}
+      </div>
+      
+      <div id="footer">
+        <p>Powered by <a href="http://tumblr.com">Tumblr</a> and inspired by a few <a href="http://nothingconcept.com">others</a>.  There are also <a href="/archive">archives</a>, if you are so inclined.</p>
+      </div>
+    </div>
+
+    <script type="text/javascript" charset="utf-8">
+	$(document).ready(function(){
+
+		//Hide (Collapse) the toggle containers on load
+		$(".toggle_container").hide(); 
+
+		//Switch the "Open" and "Close" state per click
+		$("h2.trigger").toggle(function(){
+			$(this).addClass("active");
+			}, function () {
+			$(this).removeClass("active");
+		});
+
+		//Slide up and down on click
+		$("h2.trigger").click(function(){
+			$(this).next(".toggle_container").slideToggle("slow");
+		});
+
+	});
+    </script>
+
+    <div id="nav_list">
+		<h1><a href="/">{Title}</a></h1>
+		<h2 class="trigger"><a href="#">About</a></h2>
+		<div class="toggle_container">
+			{Description}
+		</div>
+	</div>
+    {block:IfDisqusShortname}
+    <script type="text/javascript">
+    //<![CDATA[
+    (function() {
+        var links = document.getElementsByTagName('a');
+        var query = '?';
+        for(var i = 0; i < links.length; i++) {
+        if(links[i].href.indexOf('#disqus_thread') >= 0) {
+            query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+        }
+        }
+        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+    })();
+    //]]>
+    </script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22983311-1']);
+  _gaq.push(['_setDomainName', '.gregburek.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    {/block:IfDisqusShortname}
+  </body>
+</html>
+
